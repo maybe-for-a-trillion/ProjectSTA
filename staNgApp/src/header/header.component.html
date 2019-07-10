@@ -1,0 +1,15 @@
+<nav fxLayout="row" class="app-header" fxLayoutAlign="start center">
+  <a mat-icon-button class="app-header-brand">
+    <img src="assets/img/teamdaugherty.png" alt="Daugherty Logo">
+  </a>
+  <div fxFlex></div>
+  <a mat-button [routerLink]="['']" class="app-header-link">Home</a>
+  <a mat-button *ngIf="user$ | async as user" [routerLink]="['/users']" class="app-header-link">Users</a>
+  <button mat-button [matMenuTriggerFor]="userMenu" *ngIf="user$ | async as user">
+    <i class="fa fa-user"></i> {{ user.username }}
+  </button>
+  <mat-menu #userMenu="matMenu">
+    <button mat-menu-item (click)="logout()">Logout</button>
+  </mat-menu>
+  <div fxFlex="1"></div>
+</nav>

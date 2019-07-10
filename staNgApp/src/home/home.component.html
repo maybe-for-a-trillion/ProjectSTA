@@ -1,0 +1,19 @@
+<div class="home" fxLayout="column">
+  <div fxLayout="row">
+    <div fxFlex></div>
+    <div fxFlex class="home-login" [hidden]="!!(loggedInUser$ | async)">
+      <h3>Angular 7 Exercises Login</h3>
+
+      <form #userLoginForm="ngForm" fxLayout="column" (ngSubmit)="login()">
+        <mat-form-field>
+          <input type="text" id="username" name="username" matInput [(ngModel)]="credentials.username" required placeholder="Username">
+        </mat-form-field>
+        <mat-form-field>
+          <input type="password" id="password" name="password" matInput [(ngModel)]="credentials.password" required placeholder="Password">
+        </mat-form-field>
+        <button type="submit" mat-raised-button color="primary" class="home-login-button">Sign In</button>
+      </form>
+    </div>
+    <div fxFlex></div>
+  </div>
+</div>
