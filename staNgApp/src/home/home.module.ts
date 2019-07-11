@@ -1,5 +1,6 @@
 import {NgModule, Inject} from "@angular/core";
 import {FormsModule} from "@angular/forms";
+import {MatFormFieldModule} from '@angular/material/form-field';
 import {HomeComponent} from "./home.component";
 import {CommonModule} from '@angular/common';
 import {HomeRoutingModule} from "./home-routing.module";
@@ -10,8 +11,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
   imports: [
     CommonModule,
     FormsModule,
-    HomeRoutingModule,
+    MatFormFieldModule,
     MatSnackBarModule,
+    HomeRoutingModule,
   ],
   exports: [HomeComponent]
 })

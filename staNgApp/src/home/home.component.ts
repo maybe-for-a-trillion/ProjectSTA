@@ -7,7 +7,7 @@ import { MatSnackBar } from '@angular/material';
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
-  styleUrls: ["../../../shared/styles/home.scss"]
+  //styleUrls: ["../../../shared/styles/home.scss"]
 })
 export class HomeComponent {
   public snackBar: MatSnackBar;
